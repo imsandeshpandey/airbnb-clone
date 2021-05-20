@@ -19,7 +19,8 @@ const RawButton = styled.button`
   ${fontWeight}
   ${boxShadow}
   ${layout}
-  
+  transition: ${(props) => props.transition};
+
   &:hover {
     box-shadow: ${(props) => props.theme.shadows.small};
   }
@@ -36,7 +37,7 @@ RawButton.defaultProps = {
 };
 
 const Button = (props) => (
-  <RawButton {...props} bg="primary" color="white" borderColor="primary" />
+  <RawButton color="white" bg="primary" {...props} borderColor="primary" />
 );
 
 const RawPillButton = (props) => (

@@ -13,22 +13,30 @@ function Footer() {
       backgroundImage="url('https://tripfinder-redq.firebaseapp.com/static/media/footer-bg.ca99d536.svg')"
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom"
-      height="250px"
+      backgroundSize="contain"
       display="flex"
       justifyContent="center"
+      pt={[40, 80]}
+      pb={[20, 30]}
     >
       <Box
         // footer content group
-        mt={80}
+
         display="flex"
         flexDirection="column"
         justifyContent="space-between"
         alignItems="center"
-        height="150px"
+        height={[100, 150]}
       >
-        <Branding size="40px" />
-        <NavMenu navItems={navItems} size="16px" />
-        <Text color="gray">Copyright @ 2021 RedQ, Inc.</Text>
+        <Branding size={[25, 40]} />
+        <NavMenu
+          navItems={navItems}
+          px={[2, 3, 4]}
+          size={["10px", "14px", "16px"]}
+        />
+        <Text fontSize={["10px", 1]} color="gray">
+          Copyright @ 2021 RedQ, Inc.
+        </Text>
       </Box>
     </Box>
   );

@@ -10,6 +10,11 @@ const Overlay = styled(Box)`
   bottom: 0;
   display: block;
   z-index: -1;
-  backdrop-filter:${props=>props.backdropFilter ? props.backdropFilter: 'none'};
+  backdrop-filter: ${(props) =>
+    props.backdropFilter ? props.backdropFilter : "none"};
 `;
+
+const ClickawayWrapper = (props) => (
+  <Overlay width="100vh" height="100vh"></Overlay>
+);
 export default Overlay;

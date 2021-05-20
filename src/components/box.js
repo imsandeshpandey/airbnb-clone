@@ -24,8 +24,10 @@ const Box = styled.div`
   ${border}
   ${shadow}
   ${zIndex}
-  ${fontWeight}
-  
+  ${fontWeight};
+  transition: ${(props) => props.transition};
+  backdrop-filter: ${(props) => props.backdropFilter};
+
   cursor: ${(props) => props.cursor};
 `;
 
